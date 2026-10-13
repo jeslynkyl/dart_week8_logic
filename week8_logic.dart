@@ -1,13 +1,16 @@
 double calculateTotal (int quantity, double unitPrice){
   if (quantity <=0){
+  // throw error for invalid input
   throw ArgumentError ('Quantity must be at least 1.');
   }
-  
+
+  // looping here
   double subtotal=0;
   for (int i=1; i<=quantity; i++){
   subtotal+=unitPrice;
   }
-  
+
+  // conditional here
   double discRate;
   if (subtotal>=500){
     discRate=0.20;
@@ -20,19 +23,21 @@ double calculateTotal (int quantity, double unitPrice){
 
 void main() {
   double unitPrice=49.50;
-  
+
+  // test inputs
   List<String> orders=['3','10','0','abc','12'];
   
   print('=== Store Order Checker ===');
-  
+
+  // error handling
   for (int i=0;i<orders.length; i++){
     String input=orders[i];
     print('Order ${i+1}: Quantity "$input"');
-    
     try{
       int quantity=int.parse(input);
       double total=calculateTotal(quantity, unitPrice);
       
+      // conditional functions; different messages for each case
       if (total>=450){
         print('Total: PHP ${total.toStringAsFixed(2)} - Big purchase!');
       } else if (total>=200){
