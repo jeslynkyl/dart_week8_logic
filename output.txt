@@ -1,0 +1,17 @@
+=== Store Order Checker ===
+Order 1: Quantity "3"
+Total: PHP 148.50 - Small purchase.
+Order 1 checked.
+Order 2: Quantity "10"
+Total: PHP 495.00 - Big purchase!
+Order 2 checked.
+Order 3: Quantity "0"
+Error: Quantity must be at least 1. Skipping order.
+Order 3 checked.
+Order 4: Quantity "abc"
+Error: "abc" is not a valid number. Skipping order.
+Order 4 checked.
+Order 5: Quantity "12"
+Total: PHP 475.20 - Big purchase!
+Order 5 checked.
+All orders processed. The program did not crash.
